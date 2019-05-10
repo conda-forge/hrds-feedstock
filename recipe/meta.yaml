@@ -1,5 +1,5 @@
 {% set name = "hrds" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/EnvModellingGroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8dc291fbdec8517cecf3362a225c67229e58928edd0435f207715cf2dc912b17
+  sha256: b0300e7bd35e0cb93f840228acc5c6bff89cccaa58b13dabcc38aa25a0ef44f6
 
 build:
   noarch: python
