@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/EnvModellingGroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b0300e7bd35e0cb93f840228acc5c6bff89cccaa58b13dabcc38aa25a0ef44f6
+  sha256: fd55415f4b8964c957949a588918608cb7e99213273eb7674a7d273b9ab072ef
 
 build:
   noarch: python
