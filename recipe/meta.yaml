@@ -1,5 +1,5 @@
 {% set name = "hrds" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/EnvModellingGroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8dc291fbdec8517cecf3362a225c67229e58928edd0435f207715cf2dc912b17
+  sha256: fd55415f4b8964c957949a588918608cb7e99213273eb7674a7d273b9ab072ef
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,14 +33,14 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE
-  summary: 'hrds is a python package for obtaining points from a set of rasters at different resolutions.'
+  summary: hrds is a python package for obtaining points from a set of rasters at different resolutions.
 
   description: |
-        hrds is a python package for obtaining points from a set of rasters at
-        different resolutions. You can request a point (or list of points) and
-        hrds will return a value based on the highest resolution dataset (as
-        defined by the user) available at that point, blending datasets in a
-        buffer region to ensure consistancy.
+    hrds is a python package for obtaining points from a set of rasters at
+    different resolutions. You can request a point (or list of points) and
+    hrds will return a value based on the highest resolution dataset (as
+    defined by the user) available at that point, blending datasets in a
+    buffer region to ensure consistancy.
   doc_url: https://github.com/EnvModellingGroup/hrds
   dev_url: https://github.com/EnvModellingGroup/hrds
 
