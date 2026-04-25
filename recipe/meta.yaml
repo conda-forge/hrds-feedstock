@@ -11,20 +11,22 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - scipy
     - gdal
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - hrds
 
